@@ -56,7 +56,11 @@ const config = {
 		"release": {
 			"source": true,
 			"readme": true,
-			"public": true
+			"public": true,
+			"previews": [{
+				"name": "Preview",
+				"src": "assets/preview.png"
+			}]
 		}
 	}
 };
