@@ -1,0 +1,17 @@
+{
+    "build": {
+        "watch": false,
+        "folder": "./[plugin]",
+        "readme": true,
+        "filename": "[name].plugin.js"
+    },
+    "github": {
+        "username": "BD-MemorySeal",
+        "branch": "main",
+        "repo": "DevilBro-Alternatives"
+    },
+    "paths": {
+        "bdfolder": "C:/Users/Strencher/AppData/Roaming/BetterDiscord",
+        "release_folder": "<seret>"
+    }
+}
