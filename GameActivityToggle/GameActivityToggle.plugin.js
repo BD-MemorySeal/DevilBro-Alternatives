@@ -1,10 +1,10 @@
 /**
- * @name NSFWTag
- * @author Strencher
+ * @name GameActivityToggle
+ * @author Strencher, Egrodo
  * @version 1.0.0
- * @description Marks NSFW Channels with a red text badge.
- * @source https://github.com/BD-MemorySeal/DevilBro-Alternatives/tree/development/NSFWTag
- * @updateUrl https://raw.githubusercontent.com/BD-MemorySeal/DevilBro-Alternatives/distribution/NSFWTag/NSFWTag.plugin.js
+ * @description Simple plugin that adds the "display game activity" setting on the home toolbar so you can toggle it easier when you don't want your friends knowing how much you play video games.
+ * @source https://github.com/BD-MemorySeal/DevilBro-Alternatives/tree/development/GameActivityToggle
+ * @updateUrl https://raw.githubusercontent.com/BD-MemorySeal/DevilBro-Alternatives/distribution/GameActivityToggle/GameActivityToggle.plugin.js
  */
 /*@cc_on
 @if (@_jscript)
@@ -31,17 +31,23 @@
 /* Generated Code */
 const config = {
 	"info": {
-		"name": "NSFWTag",
+		"name": "GameActivityToggle",
 		"authors": [{
-			"name": "Strencher",
-			"discord_id": "415849376598982656",
-			"github_username": "Strencher",
-			"twitter_username": "Strencher3"
-		}],
+				"name": "Strencher",
+				"discord_id": "415849376598982656",
+				"github_username": "Strencher",
+				"twitter_username": "Strencher3"
+			},
+			{
+				"name": "Egrodo",
+				"discord_id": "162278177933230081",
+				"github_username": "Egrodo"
+			}
+		],
 		"version": "1.0.0",
-		"description": "Marks NSFW Channels with a red text badge.",
-		"github": "https://github.com/BD-MemorySeal/DevilBro-Alternatives/tree/development/NSFWTag",
-		"github_raw": "https://raw.githubusercontent.com/BD-MemorySeal/DevilBro-Alternatives/distribution/NSFWTag/NSFWTag.plugin.js"
+		"description": "Simple plugin that adds the \"display game activity\" setting on the home toolbar so you can toggle it easier when you don't want your friends knowing how much you play video games.",
+		"github": "https://github.com/BD-MemorySeal/DevilBro-Alternatives/tree/development/GameActivityToggle",
+		"github_raw": "https://raw.githubusercontent.com/BD-MemorySeal/DevilBro-Alternatives/distribution/GameActivityToggle/GameActivityToggle.plugin.js"
 	},
 	"build": {
 		"copy": true,
@@ -260,7 +266,7 @@ function buildPlugin([BasePlugin, PluginApi]) {
 			}
 		};
 		var __webpack_modules__ = {
-			185: (module, __webpack_exports__, __webpack_require__) => {
+			635: (module, __webpack_exports__, __webpack_require__) => {
 				__webpack_require__.d(__webpack_exports__, {
 					Z: () => __WEBPACK_DEFAULT_EXPORT__
 				});
@@ -269,10 +275,9 @@ function buildPlugin([BasePlugin, PluginApi]) {
 				var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()((function(i) {
 					return i[1];
 				}));
-				___CSS_LOADER_EXPORT___.push([module.id, ".NSFWTag-badge-tag{display:block;font-size:10px;margin-left:5px;border-radius:3px}.NSFWTag-badge-tooltip{z-index:999}", ""]);
+				___CSS_LOADER_EXPORT___.push([module.id, ".GameActivityToggle-button-disabled svg>polygon{fill:#ed4245}", ""]);
 				___CSS_LOADER_EXPORT___.locals = {
-					tag: "NSFWTag-badge-tag",
-					tooltip: "NSFWTag-badge-tooltip"
+					disabled: "GameActivityToggle-button-disabled"
 				};
 				StyleLoader.append(module.id, ___CSS_LOADER_EXPORT___.toString());
 				const __WEBPACK_DEFAULT_EXPORT__ = Object.assign(___CSS_LOADER_EXPORT___, ___CSS_LOADER_EXPORT___.locals);
@@ -359,49 +364,94 @@ function buildPlugin([BasePlugin, PluginApi]) {
 		(() => {
 			__webpack_require__.r(__webpack_exports__);
 			__webpack_require__.d(__webpack_exports__, {
-				default: () => NSFWTag
+				default: () => GameActivityToggle
 			});
-			const components_namespaceObject = Modules["@discord/components"];
-			const flux_namespaceObject = Modules["@discord/flux"];
-			const stores_namespaceObject = Modules["@discord/stores"];
 			const external_PluginApi_namespaceObject = PluginApi;
 			const external_BasePlugin_namespaceObject = BasePlugin;
 			var external_BasePlugin_default = __webpack_require__.n(external_BasePlugin_namespaceObject);
+			const flux_namespaceObject = Modules["@discord/flux"];
+			const stores_namespaceObject = Modules["@discord/stores"];
+			var React = __webpack_require__(832);
+			function _extends() {
+				_extends = Object.assign || function(target) {
+					for (var i = 1; i < arguments.length; i++) {
+						var source = arguments[i];
+						for (var key in source)
+							if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
+					}
+					return target;
+				};
+				return _extends.apply(this, arguments);
+			}
+			const disabled = [React.createElement("g", null, React.createElement("path", {
+				fill: "currentColor",
+				d: "M17.7,5.7h-0.8L4.4,18.1c1-0.2,1.9-0.8,2.3-1.8l0.1-0.3c0.3-0.6,0.9-1,1.6-1h1.9l4.7-4.6v0c-0.1-0.1-0.1-0.2-0.1-0.4c0-0.4,0.3-0.8,0.8-0.8c0,0,0,0,0,0c0.1,0,0.2,0,0.3,0.1l0.5-0.5c-0.1-0.1-0.1-0.2-0.1-0.4c0-0.4,0.3-0.8,0.8-0.8c0.1,0,0.3,0,0.4,0.1l1.7-1.7C18.8,5.8,18.3,5.7,17.7,5.7z M23.5,13.4l-2.8-5.8c0,0,0-0.1-0.1-0.1l-1.8,1.8c0.4,0,0.7,0.4,0.7,0.8c0,0.4-0.3,0.8-0.8,0.8c-0.4,0-0.8-0.3-0.8-0.7l-0.8,0.8c0.4,0,0.7,0.4,0.7,0.8c0,0.4-0.4,0.8-0.8,0.8c-0.4,0-0.8-0.3-0.8-0.7L13.1,15h2.4c0.7,0,1.3,0.4,1.6,1l0.1,0.3c0.8,1.6,2.7,2.3,4.4,1.6l0.3-0.1C23.6,17,24.3,15,23.5,13.4z M6.3,5.7C5,5.7,3.8,6.4,3.3,7.6l-2.8,5.8c0,0,0,0,0,0C-0.3,15,0.4,16.9,2,17.7L14,5.7H6.3z M8.2,10.8H7.3c-0.2,0-0.4,0.2-0.4,0.3v0.9c0,0.2-0.2,0.3-0.3,0.3H5.7c-0.2,0-0.3-0.2-0.3-0.3v-0.9c0-0.2-0.2-0.3-0.4-0.3H4.1c-0.2,0-0.4-0.2-0.4-0.4V9.6c0-0.2,0.2-0.4,0.4-0.4H5c0.2,0,0.4-0.2,0.4-0.4V8c0-0.2,0.2-0.4,0.4-0.4h0.8C6.8,7.7,7,7.8,7,8v0.9c0,0.2,0.2,0.4,0.4,0.4h0.9c0.2,0,0.3,0.2,0.3,0.4v0.8C8.6,10.7,8.4,10.8,8.2,10.8z"
+			}), React.createElement("polygon", {
+				points: "19.3,11.1 19.3,11.1 19.3,11.1 "
+			}), React.createElement("polygon", {
+				points: "19.3,11.2 19.3,11.1 19.3,11.1 "
+			})), React.createElement("polygon", {
+				points: "22.6,2.7 22.6,2.8 19.3,6.1 16,9.3 16,9.4 15,10.4 15,10.4 10.3,15 2.8,22.5 1.4,21.1 21.2,1.3 "
+			})];
+			const enabled = React.createElement("g", null, React.createElement("path", {
+				fill: "currentColor",
+				d: "M20.8,7.7c-0.6-1.2-1.8-1.9-3.1-1.9H6.3C5,5.7,3.8,6.5,3.2,7.6l-2.8,5.8c0,0,0,0,0,0C-0.3,15.1,0.4,17,2,17.8L2.3,18C4,18.7,5.9,18,6.7,16.4l0.1-0.3c0.3-0.6,0.9-1,1.6-1h7.1c0.7,0,1.3,0.4,1.6,1l0.1,0.3c0.8,1.6,2.7,2.4,4.4,1.6l0.3-0.1c1.6-0.8,2.3-2.7,1.6-4.4L20.8,7.7z M8.6,10.5c0,0.2-0.2,0.4-0.4,0.4H7.3c-0.2,0-0.4,0.2-0.4,0.4v0.9c0,0.2-0.2,0.4-0.4,0.4H5.7c-0.2,0-0.4-0.2-0.4-0.4v-0.9c0-0.2-0.2-0.4-0.4-0.4c0,0,0,0,0,0H4.1c-0.2,0-0.4-0.2-0.4-0.4V9.7c0-0.2,0.2-0.4,0.4-0.4h0.9c0.2,0,0.4-0.2,0.4-0.4c0,0,0,0,0,0V8.1c0-0.2,0.2-0.4,0.4-0.4h0.8C6.8,7.7,7,7.9,7,8.1V9c0,0.2,0.2,0.4,0.4,0.4h0.9c0.2,0,0.3,0.2,0.3,0.4V10.5z M15.6,10.9c-0.4,0-0.8-0.3-0.8-0.8c0-0.4,0.3-0.8,0.8-0.8c0,0,0,0,0,0c0.4,0,0.8,0.3,0.8,0.8C16.4,10.5,16.1,10.9,15.6,10.9z M17.2,7.7C17.2,7.7,17.2,7.7,17.2,7.7c0.4,0,0.8,0.3,0.8,0.8c0,0,0,0,0,0c0,0.4-0.4,0.8-0.8,0.8c-0.4,0-0.8-0.4-0.8-0.8S16.8,7.7,17.2,7.7z M18,11.7L18,11.7C18,11.7,18,11.7,18,11.7c0,0.4-0.3,0.8-0.8,0.8c-0.4,0-0.8-0.3-0.8-0.8c0-0.4,0.3-0.8,0.8-0.8c0,0,0,0,0,0C17.7,10.9,18,11.3,18,11.7C18,11.7,18,11.7,18,11.7L18,11.7C18,11.7,18,11.7,18,11.7C18,11.7,18,11.7,18,11.7z M18.9,10.9c-0.4,0-0.8-0.3-0.8-0.8c0-0.4,0.3-0.8,0.8-0.8c0,0,0,0,0,0c0.4,0,0.8,0.3,0.8,0.8C19.6,10.5,19.3,10.9,18.9,10.9z"
+			}), React.createElement("polygon", {
+				points: "19.3,11.2 19.3,11.2 19.3,11.2 "
+			}), React.createElement("polygon", {
+				points: "19.3,11.2 19.3,11.2 19.3,11.2 "
+			}));
+			function GamePad({
+				enabled: isEnabled,
+				...props
+			}) {
+				return React.createElement("svg", _extends({
+					x: "0px",
+					y: "0px",
+					viewBox: "0 0 24 24",
+					width: "20",
+					height: "20"
+				}, props), isEnabled ? enabled : disabled);
+			}
+			var external_BdApi_React_ = __webpack_require__(832);
+			var external_BdApi_React_default = __webpack_require__.n(external_BdApi_React_);
+			var components_button = __webpack_require__(635);
+			var button_React = __webpack_require__(832);
+			const PanelButton = external_PluginApi_namespaceObject.WebpackModules.getByDisplayName("PanelButton");
+			const SettingsUpdater = external_PluginApi_namespaceObject.WebpackModules.getByProps("updateRemoteSettings");
+			function GameActivityToggleButton() {
+				const showGameActivity = (0, flux_namespaceObject.useStateFromStores)([stores_namespaceObject.SettingsStore], (() => stores_namespaceObject.SettingsStore.showCurrentGame));
+				const tooltipText = (0, external_BdApi_React_.useMemo)((() => `Turn ${showGameActivity ? "off" : "on"} game activity`), [showGameActivity]);
+				const handleClick = (0, external_BdApi_React_.useCallback)((() => {
+					SettingsUpdater.updateRemoteSettings({
+						showCurrentGame: !showGameActivity
+					});
+				}), [showGameActivity]);
+				return button_React.createElement(PanelButton, {
+					icon: () => button_React.createElement(GamePad, {
+						enabled: showGameActivity
+					}),
+					onClick: handleClick,
+					tooltipText,
+					innerClassName: components_button.Z.disabled
+				});
+			}
 			const external_StyleLoader_namespaceObject = StyleLoader;
 			var external_StyleLoader_default = __webpack_require__.n(external_StyleLoader_namespaceObject);
-			var badge = __webpack_require__(185);
-			var React = __webpack_require__(832);
-			const {
-				TextBadge
-			} = external_PluginApi_namespaceObject.WebpackModules.getByProps("TextBadge");
-			function NSFWBadge({
-				channelId
-			}) {
-				const nsfw = (0, flux_namespaceObject.useStateFromStores)([stores_namespaceObject.Channels], (() => stores_namespaceObject.Channels.getChannel(channelId)?.nsfw));
-				if (!nsfw) return null;
-				return React.createElement(components_namespaceObject.TooltipContainer, {
-					spacing: 10,
-					className: badge.Z.tooltip,
-					position: "top",
-					text: "This channel was marked as not-safe-for-netword."
-				}, React.createElement(TextBadge, {
-					text: "NSFW",
-					className: badge.Z.tag
-				}));
-			}
-			class NSFWTag extends(external_BasePlugin_default()) {
+			class GameActivityToggle extends(external_BasePlugin_default()) {
 				onStart() {
-					this.patchChannelItem();
+					this.patchAccount();
 					external_StyleLoader_default().inject();
 				}
-				async patchChannelItem() {
-					const ChannelItem = external_PluginApi_namespaceObject.WebpackModules.getModule((m => "ChannelItem" === m?.default?.displayName));
-					external_PluginApi_namespaceObject.Patcher.after(ChannelItem, "default", ((_, [props]) => {
-						if (!Array.isArray(props.children) || props.children.some((e => e?.type === NSFWBadge))) return;
-						props.children.push(React.createElement(NSFWBadge, {
-							channelId: props.channel.id
-						}));
+				async patchAccount() {
+					const selector = `.${external_PluginApi_namespaceObject.WebpackModules.getByProps("container", "avatar", "redIcon")?.container}`;
+					const Account = await external_PluginApi_namespaceObject.ReactComponents.getComponentByName("Account", selector);
+					external_PluginApi_namespaceObject.Patcher.after(Account.component.prototype, "render", ((_, __, res) => {
+						const tree = external_PluginApi_namespaceObject.Utilities.findInReactTree(res, (e => Array.isArray(e?.children) && !e.onMouseEnter));
+						if (!tree || tree.children.some((child => child?.type === GameActivityToggleButton))) return;
+						tree.children.unshift(external_BdApi_React_default().createElement(GameActivityToggleButton, null));
 					}));
+					Account.forceUpdateAll();
 				}
 				onStop() {
 					external_StyleLoader_default().remove();
