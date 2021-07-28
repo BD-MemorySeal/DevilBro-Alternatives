@@ -3,8 +3,8 @@
  * @author Strencher
  * @version 0.0.2
  * @description Marks NSFW Channels with a red text badge.
- * @source https://github.com/Strencher/BetterDiscordStuff/blob/master/NSFWTag/NSFWTag.plugin.js
- * @updateUrl https://raw.githubusercontent.com/Strencher/BetterDiscordStuff/master/NSFWTag/NSFWTag.plugin.js
+ * @source https://github.com/BD-MemorySeal/DevilBro-Alternatives/tree/development/NSFWTag
+ * @updateUrl https://raw.githubusercontent.com/BD-MemorySeal/DevilBro-Alternatives/distribution/NSFWTag/NSFWTag.plugin.js
  */
 /*@cc_on
 @if (@_jscript)
@@ -40,8 +40,8 @@ const config = {
 		}],
 		"version": "0.0.2",
 		"description": "Marks NSFW Channels with a red text badge.",
-		"github": "https://github.com/Strencher/BetterDiscordStuff/blob/master/NSFWTag/NSFWTag.plugin.js",
-		"github_raw": "https://raw.githubusercontent.com/Strencher/BetterDiscordStuff/master/NSFWTag/NSFWTag.plugin.js"
+		"github": "https://github.com/BD-MemorySeal/DevilBro-Alternatives/tree/development/NSFWTag",
+		"github_raw": "https://raw.githubusercontent.com/BD-MemorySeal/DevilBro-Alternatives/distribution/NSFWTag/NSFWTag.plugin.js"
 	},
 	"build": {
 		"copy": true,
