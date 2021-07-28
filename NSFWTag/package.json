@@ -9,7 +9,7 @@
 				"twitter_username": "Strencher3"
 			}
 		],
-		"version": "0.0.2",
+		"version": "1.0.0",
 		"description": "Marks NSFW Channels with a red text badge.",
 		"github": "https://github.com/BD-MemorySeal/DevilBro-Alternatives/tree/development/NSFWTag",
 		"github_raw": "https://raw.githubusercontent.com/BD-MemorySeal/DevilBro-Alternatives/distribution/NSFWTag/NSFWTag.plugin.js"

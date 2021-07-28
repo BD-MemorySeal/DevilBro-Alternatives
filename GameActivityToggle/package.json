@@ -1,0 +1,32 @@
+{
+	"info": {
+		"name": "GameActivityToggle",
+		"authors": [
+			{
+				"name": "Strencher",
+				"discord_id": "415849376598982656",
+				"github_username": "Strencher",
+				"twitter_username": "Strencher3"
+			},
+            {
+                "name": "Egrodo",
+                "discord_id": "162278177933230081",
+                "github_username": "Egrodo"
+            }
+		],
+		"version": "1.0.0",
+		"description": "Simple plugin that adds the \"display game activity\" setting on the home toolbar so you can toggle it easier when you don't want your friends knowing how much you play video games.",
+		"github": "https://github.com/BD-MemorySeal/DevilBro-Alternatives/tree/development/GameActivityToggle",
+		"github_raw": "https://raw.githubusercontent.com/BD-MemorySeal/DevilBro-Alternatives/distribution/GameActivityToggle/GameActivityToggle.plugin.js"
+	},
+	"build": {
+		"copy": true,
+		"production": true,
+        "zlibrary": true,
+		"release": {
+			"source": true,
+			"readme": true,
+			"public": true
+		}
+	}
+}
