@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/DevilBro/BetterDiscordStuff.git"
+    "url": "git://github.com/BD-MemorySeal/DevilBro-Alternatives.git"
   },
   "author": "Strencher",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Strencher/BetterDiscordStuff/issues"
+    "url": "https://github.com/BD-MemorySeal/DevilBro-Alternatives/issues"
   },
-  "homepage": "https://github.com/Strencher/BetterDiscordStuff#readme",
+  "homepage": "https://github.com/BD-MemorySeal/DevilBro-Alternatives#README",
   "dependencies": {
     "bdbuilder": "^1.2.6-preview.4"
   }
