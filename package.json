@@ -16,7 +16,7 @@
     "url": "https://github.com/Strencher/BetterDiscordStuff/issues"
   },
   "homepage": "https://github.com/Strencher/BetterDiscordStuff#readme",
-  "devDependencies": {
-    "@kyza/bdbuilder": "^1.2.2"
+  "dependencies": {
+    "bdbuilder": "^1.2.6-preview.4"
   }
 }

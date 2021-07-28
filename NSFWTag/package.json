@@ -1,0 +1,27 @@
+{
+	"info": {
+		"name": "NSFWTag",
+		"authors": [
+			{
+				"name": "Strencher",
+				"discord_id": "415849376598982656",
+				"github_username": "Strencher",
+				"twitter_username": "Strencher3"
+			}
+		],
+		"version": "0.0.2",
+		"description": "Marks NSFW Channels with a red text badge.",
+		"github": "https://github.com/Strencher/BetterDiscordStuff/blob/master/NSFWTag/NSFWTag.plugin.js",
+		"github_raw": "https://raw.githubusercontent.com/Strencher/BetterDiscordStuff/master/NSFWTag/NSFWTag.plugin.js"
+	},
+	"build": {
+		"copy": true,
+		"production": true,
+        "zlibrary": true,
+		"release": {
+			"source": true,
+			"readme": true,
+			"public": true
+		}
+	}
+}
