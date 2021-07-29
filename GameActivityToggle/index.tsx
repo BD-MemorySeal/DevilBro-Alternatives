@@ -5,6 +5,7 @@ import BasePlugin from "@zlibrary/plugin";
 import GameActivityToggleButton from "./components/button";
 import styles from "styles";
 import React from "react";
+import SettingsPanel from "./components/settings";
 
 export default class GameActivityToggle extends BasePlugin {
     public onStart() {
@@ -12,12 +13,18 @@ export default class GameActivityToggle extends BasePlugin {
         styles.inject();
     }
 
+    public getSettingsPanel() {
+        return (
+            <SettingsPanel />
+        );
+    }
+
     private async patchAccount() {
         const selector = `.${WebpackModules.getByProps("container", "avatar", "redIcon")?.container}`;
         const Account = await ReactComponents.getComponentByName("Account", selector);
 
         Patcher.after(Account.component.prototype, "render", (_, __, res) => {
-            const tree = Utilities.findInReactTree(res, (e) => Array.isArray(e?.children) && !e.onMouseEnter);
+            const tree = Utilities.findInReactTree(res, (e) => Array.isArray(e?.children) && !e?.onMouseEnter);
             if (!tree || tree.children.some((child: React.ReactElement) => child?.type === GameActivityToggleButton)) return;
 
             tree.children.unshift(

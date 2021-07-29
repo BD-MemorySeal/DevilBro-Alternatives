@@ -4,9 +4,11 @@ import { WebpackModules } from "@zlibrary";
 import GamePad from "./icons/gamepad";
 import { useCallback, useMemo } from "react";
 import styles from "./button.scss";
+import Settings from "../settings";
 
 const PanelButton = WebpackModules.getByDisplayName("PanelButton");
 const SettingsUpdater = WebpackModules.getByProps("updateRemoteSettings");
+const SoundModule = WebpackModules.getByProps("playSound");
 
 export default function GameActivityToggleButton() {
     const showGameActivity = useStateFromStores([SettingsStore], () => SettingsStore.showCurrentGame);
@@ -15,6 +17,7 @@ export default function GameActivityToggleButton() {
         SettingsUpdater.updateRemoteSettings({
             showCurrentGame: !showGameActivity
         });
+       if (Settings.get("playSound", true)) SoundModule.playSound(!showGameActivity ? "unmute" : "mute");
     }, [showGameActivity]);
 
     return (
