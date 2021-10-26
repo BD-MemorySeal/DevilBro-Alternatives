@@ -1,0 +1,27 @@
+{
+    "info": {
+        "name": "ShowHiddenChannels",
+        "authors": [
+            {
+                "name": "Strencher",
+                "discord_id": "415849376598982656",
+                "github_username": "Strencher",
+                "twitter_username": "Strencher3"
+            }
+        ],
+        "version": "1.0.0",
+        "description": "Show hidden guild channels.",
+        "github": "https://github.com/BD-MemorySeal/DevilBro-Alternatives/tree/development/ShowHiddenChannels",
+        "github_raw": "https://raw.githubusercontent.com/BD-MemorySeal/DevilBro-Alternatives/distribution/ShowHiddenChannels/ShowHiddenChannels.plugin.js"
+    },
+    "build": {
+        "copy": true,
+        "production": true,
+        "zlibrary": true,
+        "release": {
+            "source": true,
+            "readme": true,
+            "public": true
+        }
+    }
+}
