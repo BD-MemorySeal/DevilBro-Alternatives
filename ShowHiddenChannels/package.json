@@ -9,7 +9,7 @@
                 "twitter_username": "Strencher3"
             }
         ],
-        "version": "1.0.1",
+        "version": "1.0.2",
         "description": "Show hidden guild channels.",
         "github": "https://github.com/BD-MemorySeal/DevilBro-Alternatives/tree/development/ShowHiddenChannels",
         "github_raw": "https://raw.githubusercontent.com/BD-MemorySeal/DevilBro-Alternatives/distribution/ShowHiddenChannels/ShowHiddenChannels.plugin.js"
@@ -23,5 +23,14 @@
             "readme": true,
             "public": true
         }
-    }
+    },
+    "changelog": [
+		{
+			"type": "fixed",
+			"title": "Fixed",
+			"items": [
+				"Fix ShowHiddenChannels"
+			]
+		}
+	]
 }

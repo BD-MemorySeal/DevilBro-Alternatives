@@ -86,17 +86,7 @@ export default class ShowHiddenChannels extends BasePlugin {
     }
 
     #getChannelsForGuild(guildId: string) {
-        const result = [];
-        const keys = Object.keys(Channels.getMutableGuildChannelsByGuild()[guildId] ?? {});
-
-        for (let i = 0; i < keys.length; i++) {
-            const channelId = keys[i];
-            if (!Channels.hasChannel(channelId)) continue;
-
-            result.push(Channels.getChannel(channelId));
-        }
-
-        return result;
+        return Object.values(Channels.getMutableGuildChannelsForGuild(guildId));
     }
 
     async #patchPermissionModule() {
