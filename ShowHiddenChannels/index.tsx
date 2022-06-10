@@ -45,6 +45,7 @@ export default class ShowHiddenChannels extends BasePlugin {
         const UnreadStore = WebpackModules.getByProps("hasUnread");
 
         Patcher.after(UnreadStore, "hasUnread", (_, [id]) => {
+            if (Channels.getMutablePrivateChannels()?.hasOwnProperty(id)) return;
             if (!this.can(Permissions.VIEW_CHANNEL, Channels.getChannel(id))) return false;
         });
     }
