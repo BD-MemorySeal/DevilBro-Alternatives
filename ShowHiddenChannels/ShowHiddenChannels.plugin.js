@@ -1,7 +1,7 @@
 /**
  * @name ShowHiddenChannels
  * @author Strencher
- * @version 1.0.1
+ * @version 1.0.2
  * @description Show hidden guild channels.
  * @source https://github.com/BD-MemorySeal/DevilBro-Alternatives/tree/development/ShowHiddenChannels
  * @updateUrl https://raw.githubusercontent.com/BD-MemorySeal/DevilBro-Alternatives/distribution/ShowHiddenChannels/ShowHiddenChannels.plugin.js
@@ -38,7 +38,7 @@ const config = {
 			"github_username": "Strencher",
 			"twitter_username": "Strencher3"
 		}],
-		"version": "1.0.1",
+		"version": "1.0.2",
 		"description": "Show hidden guild channels.",
 		"github": "https://github.com/BD-MemorySeal/DevilBro-Alternatives/tree/development/ShowHiddenChannels",
 		"github_raw": "https://raw.githubusercontent.com/BD-MemorySeal/DevilBro-Alternatives/distribution/ShowHiddenChannels/ShowHiddenChannels.plugin.js"
@@ -52,7 +52,14 @@ const config = {
 			"readme": true,
 			"public": true
 		}
-	}
+	},
+	"changelog": [{
+		"type": "fixed",
+		"title": "Fixed",
+		"items": [
+			"Fix ShowHiddenChannels"
+		]
+	}]
 };
 function buildPlugin([BasePlugin, PluginApi]) {
 	const module = {
@@ -126,7 +133,7 @@ function buildPlugin([BasePlugin, PluginApi]) {
 					return ___createMemoize___(this, 'TransitionGroup', () => BdApi.findModuleByDisplayName('TransitionGroup'))
 				},
 				get 'Button'() {
-					return ___createMemoize___(this, 'Button', () => BdApi.findModuleByProps('DropdownSizes'))
+					return ___createMemoize___(this, 'Button', () => BdApi.findModule(m => 'DropdownSizes' in m && typeof(m) === 'function'))
 				},
 				get 'Popout'() {
 					return ___createMemoize___(this, 'Popout', () => BdApi.findModuleByDisplayName('Popout'))
@@ -491,14 +498,7 @@ function buildPlugin([BasePlugin, PluginApi]) {
 				}));
 			}
 			function _getChannelsForGuild2(guildId) {
-				const result = [];
-				const keys = Object.keys(stores_namespaceObject.Channels.getMutableGuildChannelsByGuild()[guildId] ?? {});
-				for (let i = 0; i < keys.length; i++) {
-					const channelId = keys[i];
-					if (!stores_namespaceObject.Channels.hasChannel(channelId)) continue;
-					result.push(stores_namespaceObject.Channels.getChannel(channelId));
-				}
-				return result;
+				return Object.values(stores_namespaceObject.Channels.getMutableGuildChannelsForGuild(guildId));
 			}
 			async function _patchPermissionModule2() {
 				external_PluginApi_namespaceObject.Patcher.after(GuildPermissions, "can", ((_, [perm]) => {
